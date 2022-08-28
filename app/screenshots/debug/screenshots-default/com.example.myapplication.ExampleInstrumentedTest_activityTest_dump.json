@@ -1,0 +1,127 @@
+{
+  "viewHierarchy": {
+    "class": "com.android.internal.policy.DecorView",
+    "left": 0,
+    "top": 0,
+    "width": 1080,
+    "height": 2280,
+    "children": [
+      {
+        "class": "android.widget.LinearLayout",
+        "left": 0,
+        "top": 0,
+        "width": 1080,
+        "height": 2148,
+        "children": [
+          {
+            "class": "android.view.ViewStub",
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "class": "android.widget.FrameLayout",
+            "left": 0,
+            "top": 171,
+            "width": 1080,
+            "height": 1977,
+            "children": [
+              {
+                "class": "androidx.appcompat.widget.ActionBarOverlayLayout",
+                "left": 0,
+                "top": 171,
+                "width": 1080,
+                "height": 1977,
+                "children": [
+                  {
+                    "class": "androidx.appcompat.widget.ContentFrameLayout",
+                    "left": 0,
+                    "top": 325,
+                    "width": 1080,
+                    "height": 1823,
+                    "children": [
+                      {
+                        "class": "androidx.constraintlayout.widget.ConstraintLayout",
+                        "left": 0,
+                        "top": 325,
+                        "width": 1080,
+                        "height": 1823,
+                        "children": [
+                          {
+                            "class": "com.google.android.material.textview.MaterialTextView",
+                            "left": 435,
+                            "top": 1210,
+                            "width": 210,
+                            "height": 53
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "class": "androidx.appcompat.widget.ActionBarContainer",
+                    "left": 0,
+                    "top": 171,
+                    "width": 1080,
+                    "height": 154,
+                    "children": [
+                      {
+                        "class": "androidx.appcompat.widget.Toolbar",
+                        "left": 0,
+                        "top": 171,
+                        "width": 1080,
+                        "height": 154,
+                        "children": [
+                          {
+                            "class": "androidx.appcompat.widget.AppCompatTextView",
+                            "left": 44,
+                            "top": 211,
+                            "width": 378,
+                            "height": 74
+                          },
+                          {
+                            "class": "androidx.appcompat.widget.ActionMenuView",
+                            "left": 1080,
+                            "top": 171,
+                            "width": 0,
+                            "height": 154,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "class": "androidx.appcompat.widget.ActionBarContextView",
+                        "left": 0,
+                        "top": 171,
+                        "width": 0,
+                        "height": 0,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "android.view.View",
+        "left": 0,
+        "top": 2148,
+        "width": 1080,
+        "height": 132
+      },
+      {
+        "class": "android.view.View",
+        "left": 0,
+        "top": 0,
+        "width": 1080,
+        "height": 171
+      }
+    ]
+  },
+  "version": 1,
+  "axHierarchy": {}
+}
