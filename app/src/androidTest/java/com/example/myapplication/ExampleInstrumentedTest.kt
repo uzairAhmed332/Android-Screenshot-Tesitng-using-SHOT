@@ -1,12 +1,8 @@
 package com.example.myapplication
 
 import android.app.Activity
-import android.content.ComponentName
 import android.content.Intent
 import android.util.Log
-import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions.click
-import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.rules.activityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
@@ -15,6 +11,7 @@ import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.Until
 import com.karumi.shot.ScreenshotTest
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -40,7 +37,8 @@ class ExampleInstrumentedTest : ScreenshotTest {
 
     @Before
     fun setup() {
-        activity = getActivity()
+      //  activity = getActivity()
+        activity =  launchActivity()
 //        val context  = ApplicationProvider.getApplicationContext<Context>()
 //
 //        val intent = Intent(Intent.ACTION_MAIN)
@@ -75,15 +73,14 @@ class ExampleInstrumentedTest : ScreenshotTest {
     }
 
     @Test
-    fun activityTest_Default() {
+    fun activityDefaultTest() {
         compareScreenshot(activity)
     }
 
     @Test
-    fun activityTest() {
-      //  activity = getActivity()
-
-      //  onView(withText("NEXT")).perform(click());
+    fun activityNavigationTest() {
+        //  activity = getActivity()
+        //  onView(withText("NEXT")).perform(click());
         if (device.wait(Until.hasObject(By.text("NEXT")), 2_000L)) {
             device.findObject(By.text("NEXT")).click()
         }
@@ -93,24 +90,25 @@ class ExampleInstrumentedTest : ScreenshotTest {
             Until.hasObject(By.res("com.example.myapplication:id/edit_text")),
             2_000L
         )
+
+
+      //  TestHelper.device.wait(Until.hasObject(By.text("PREVIOUS")), 2_000L)
+        Thread.sleep(2_000)
+        if (device.wait(Until.hasObject(By.res("com.example.myapplication:id/fab")), 2_000L)) {
+            device.findObject(By.res("com.example.myapplication:id/fab")).click()
+        }
+
         if (device.wait(
                 Until.hasObject(By.res("com.example.myapplication:id/edit_text")),
                 2_000L
             )
         ) {
             device.findObject(By.res("com.example.myapplication:id/edit_text")).text =
-                "Take a screenshot!"
-        }
-
-        TestHelper.device.wait(Until.hasObject(By.text("PREVIOUS")), 2_000L)
-        Thread.sleep(2_000)
-        if (device.wait(Until.hasObject(By.res("com.example.myapplication:id/fab")), 2_000L)) {
-            device.findObject(By.res("com.example.myapplication:id/fab")).click()
+                "Taking a screenshot now!"
         }
         Thread.sleep(1_000)
-          compareScreenshot(activity)
+        compareScreenshot(activity)
     }
-
 
 
     // Hack needed until we fully support Activity Scenarios

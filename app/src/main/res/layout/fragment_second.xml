@@ -12,9 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:hint="Write something"
+        android:textSize="28sp"
+        android:textColor="#0047AB"
+        android:hint="Write somethingdsfds"
         android:padding="15dp" />
 
     <Button
